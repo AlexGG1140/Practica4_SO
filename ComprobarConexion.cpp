@@ -1,9 +1,10 @@
+//g++ curle_ok.cpp -o curle_ok -lcurl
 #include <iostream>
 #include <curl/curl.h>
-
 using namespace std;
 
-int conexion_servidor() {
+int main() {
+    //cout << ruta_conectar << endl;
     CURL *curl;
     CURLcode result;
     curl = curl_easy_init();
