@@ -1,5 +1,6 @@
 #include "ClienteRobotUnity.h"
 #include <iostream>
+#include <curl/curl.h>
 
 using namespace std;
 

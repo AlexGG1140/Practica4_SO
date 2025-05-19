@@ -1,26 +1,20 @@
-# Practica4_SO
-
-Para compilar el código:
-
 {
-    "version": "2.0.0",
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: clang++ compilar proyecto con múltiples archivos",
+            "label": "C/C++: clang++ compilar archivo activo",
             "command": "/usr/bin/clang++",
             "args": [
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
                 "-g",
-                "main.cpp",
-                "ClienteRobotUnity.cpp",
+                "${file}",
                 "-o",
-                "programa",
+                "${fileDirname}/${fileBasenameNoExtension}",
                 "-lcurl"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
@@ -28,8 +22,9 @@ Para compilar el código:
             "group": {
                 "kind": "build",
                 "isDefault": true
-            ],
-            "detail": "Compila múltiples archivos con clang++ y curl"
+            },
+            "detail": "Tarea generada por el depurador."
         }
-    ]
+    ],
+    "version": "2.0.0"
 }

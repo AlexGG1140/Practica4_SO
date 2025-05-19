@@ -1,15 +1,16 @@
+//g++ curle_ok.cpp -o curle_ok -lcurl
 #include <iostream>
 #include <curl/curl.h>
-
 using namespace std;
 
-int conexion_servidor() {
+int main() {
+    //cout << ruta_conectar << endl;
     CURL *curl;
     CURLcode result;
     curl = curl_easy_init();
 
     if (curl) {
-        const char* url = "http://10.226.166.234:8080/";
+        const char* url = "http://192.168.1.130:8080/";
 
 
         curl_easy_setopt(curl, CURLOPT_URL, url);
